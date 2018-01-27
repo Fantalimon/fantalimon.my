@@ -178,6 +178,7 @@ return [
         Fantalimon\Providers\RouteServiceProvider::class,
         /* debager laravel*/
         Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         
 
     ],
