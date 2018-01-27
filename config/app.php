@@ -176,6 +176,9 @@ return [
         // Fantalimon\Providers\BroadcastServiceProvider::class,
         Fantalimon\Providers\EventServiceProvider::class,
         Fantalimon\Providers\RouteServiceProvider::class,
+        /* debager laravel*/
+        Barryvdh\Debugbar\ServiceProvider::class,
+        
 
     ],
 
