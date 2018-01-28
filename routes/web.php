@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,11 +9,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middlavare' => ['auth']],
+    function () {
+        Route::get('/', 'DashboardController@dashboard')->name('admin.index');
+    }
+);
+Route::get('/',
+    function () {
+        return view('welcome');
+    }
+);
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
